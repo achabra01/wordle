@@ -14,7 +14,7 @@ def main():
     word = random.choice(words)
     guesses = ["_" * NUM_LETTERS] * NUM_GUESSES
 
-    for idx in range(6):
+    for idx in range(NUM_GUESSES):
         refresh_page(headline=f"Guess {idx + 1}")
         compare_guesses(guesses, word)
         guesses[idx] = get_valid_input(guesses, words)
